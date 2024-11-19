@@ -22,6 +22,27 @@
   .location .left ul{
     font-size: 30px;
   }
+  .menu-responsive .mob-menu-wrap > ul li a{
+    font-size: 70px;
+  }
+  .menu-responsive .close-menu a{
+    font-size: 50px;
+  }
+  .menu-responsive .mob-menu-wrap > ul{
+    margin-top: 0;
+  }
+  .menu-responsive .mob-menu-wrap > ul li{
+    margin-bottom: 25px;
+  }
+  .contact-banner h1{
+    font-size: 120px;
+    margin-bottom: 40px;
+    line-height: 1;
+  }
+  .locations-banner h1{
+    font-size: 120px;
+    margin-bottom: -70px;
+  }
 }
 @media (max-width: 1280px){
   .content-width{
@@ -46,6 +67,24 @@
   footer .content{
     padding: 0;
   }
+  .about-banner h1{
+    font-size: 90px;
+  }
+  .text-img h2, .img-text h2{
+    font-size: 60px;
+  }
+  .text-img .content{
+    padding: 0;
+  }
+  .img-text .content{
+    padding: 0;
+  }
+  .img-text figure{
+    top: 0;
+  }
+  .contact-banner .form-contact{
+    padding: 0;
+  }
 }
 @media (max-width:1199px) {
   .content-width{
@@ -63,9 +102,6 @@
   .top-line .right{
     justify-content: flex-end;
     grid-gap: 30px;
-  }
-  .menu-responsive .wrap{
-    width: 400px;
   }
   .menu-responsive .close-menu a span{
     width: 35px;
@@ -173,6 +209,25 @@
   .home-banner .video-wrap{
     height: 500px;
   }
+  .about-banner .text{
+    padding: 0;
+  }
+  .about-banner h1 {
+    font-size: 80px;
+  }
+  .form-contact .input-wrap input{
+    height: 74px;
+    line-height: 70px;
+    font-size: 30px;
+  }
+  .form-contact .input-wrap-submit .btn-default span{
+    height: 70px;
+    min-height: 70px;
+  }
+  .location-info .title{
+    font-size: 80px;
+    margin-top: 50px;
+  }
 }
 
 @media (max-width:991px) {
@@ -220,6 +275,58 @@
   .home-banner .video-wrap{
     height: 400px;
   }
+  .about-banner figure{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+    img{
+      width: 500px;
+    }
+  }
+  .about-banner .text{
+    width: 100%;
+  }
+  .about-banner .label{
+    text-align: center;
+  }
+  .about-banner h1{
+    text-align: center;
+  }
+  .about-banner p{
+    text-align: center;
+  }
+  .top-line .open-menu a{
+    font-size: 40px;
+  }
+  .text-img .text{
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  .text-img figure{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    top: 0;
+    img{
+      width: 500px;
+    }
+  }
+  .img-text figure{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+    img{
+      width: 500px;
+    }
+  }
+  .img-text .text{
+    width: 100%;
+  }
+  .contact-banner h1 {
+    font-size: 90px;
+  }
 }
 
 @media (max-width:767px) {
@@ -249,6 +356,28 @@
   }
   .home-banner .video-wrap {
     border-radius: 20px 5px 20px 5px;
+  }
+  .about-banner h1 {
+    font-size: 60px;
+  }
+  .text-img {
+    padding: 180px 0 173px;
+  }
+  .text-img h2, .img-text h2 {
+    font-size: 40px;
+  }
+  .follow h2 a {
+    font-size: 50px;
+  }
+  .contact-banner h1 {
+    font-size: 75px;
+  }
+  .locations-banner figure img {
+    border-radius: 30px 8px 30px 8px;
+  }
+  .locations-banner h1 {
+    font-size: 70px;
+    margin-bottom: -40px;
   }
 }
 
@@ -350,5 +479,64 @@
   }
   footer .bottom p{
     font-size: 20px;
+  }
+  .menu-responsive .wrap {
+    padding: 50px 20px;
+  }
+  .menu-responsive .close-menu a {
+    font-size: 30px;
+  }
+  .menu-responsive .close-menu{
+    top: 40px;
+    right: 20px;
+  }
+  .menu-responsive .mob-menu-wrap > ul li a {
+    font-size: 50px;
+  }
+  .about-banner {
+    padding: 190px 0 270px;
+  }
+  .about-banner figure img{
+    border-radius: 20px;
+  }
+  .about-banner h1 {
+    font-size: 40px;
+  }
+  .text-img figure img{
+    border-radius: 20px;
+  }
+  .img-text {
+    padding: 150px 0 113px;
+  }
+  .img-text figure img{
+    border-radius: 20px;
+  }
+  .contact-banner h1 {
+    font-size: 50px;
+  }
+  .form-contact .input-wrap{
+    width: 100%;
+  }
+  .form-contact .input-wrap:nth-child(2) {
+    border-left-width: 2px;
+  }
+  .form-contact .input-wrap-submit .btn-default span:last-child{
+    width: 120px;
+  }
+  .form-contact .input-wrap-submit .btn-default span:first-child {
+    width: calc(100% - 120px);
+  }
+  .contact-banner {
+    padding: 200px 0 160px;
+  }
+  .location-info .title {
+    font-size: 40px;
+    margin-top: 30px;
+  }
+  .location-info + .follow {
+    padding-top: 120px;
+  }
+  .locations-banner {
+    padding: 160px 0 0;
   }
 }

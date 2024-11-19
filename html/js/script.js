@@ -58,7 +58,7 @@ jQuery(document).ready(function ($) {
         spaceBetween: 20,
       },
       992: {
-        spaceBetween: 95,
+        spaceBetween: 32,
       },
     },
   });
