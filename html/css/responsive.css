@@ -379,7 +379,10 @@
 
   .locations-banner h1 {
     font-size: 70px;
-    margin-bottom: -40px; } }
+    margin-bottom: -40px; }
+
+  .accordion-item {
+    margin-bottom: 50px; } }
 @media (max-width: 575px) {
   .content-width {
     width: 100%;
@@ -446,7 +449,7 @@
     border-radius: 10px; }
 
   .location {
-    padding: 50px 0; }
+    padding: 50px 0 100px; }
 
   .location .content-width {
     padding: 0 10px; }

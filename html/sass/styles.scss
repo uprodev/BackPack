@@ -1516,4 +1516,37 @@ input[type=number] {
 .location-info + .follow{
   padding-top: 185px;
 }
+.accordion-item{
+  margin-bottom: 125px;
+}
+.accordion-item:last-child{
+  margin-bottom: 0;
+}
+.accordion{
+  .accordion-panel{
+    display: none;
+  }
+  .accordion-item:first-child{
+    .accordion-panel{
+      display: block;
+    }
+  }
+  .accordion-thumb{
+    cursor: pointer;
+    h2{
+      color: rgb(167, 23, 24);
+      margin: 0;
+    }
+  }
+  .accordion-panel{
+    .content{
+      margin-top: 44px;
+    }
+  }
+  .is-active{
+    h2{
+      color: #fff;
+    }
+  }
+}
 /*----------------------------END-LOCATIONS-PAGE---------------------------------*/

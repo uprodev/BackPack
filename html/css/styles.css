@@ -1359,6 +1359,26 @@ input[type=number] {
 .location-info + .follow {
   padding-top: 185px; }
 
+.accordion-item {
+  margin-bottom: 125px; }
+
+.accordion-item:last-child {
+  margin-bottom: 0; }
+
+.accordion .accordion-panel {
+  display: none; }
+.accordion .accordion-item:first-child .accordion-panel {
+  display: block; }
+.accordion .accordion-thumb {
+  cursor: pointer; }
+  .accordion .accordion-thumb h2 {
+    color: #a71718;
+    margin: 0; }
+.accordion .accordion-panel .content {
+  margin-top: 44px; }
+.accordion .is-active h2 {
+  color: #fff; }
+
 /*----------------------------END-LOCATIONS-PAGE---------------------------------*/
 
 /*# sourceMappingURL=styles.css.map */
