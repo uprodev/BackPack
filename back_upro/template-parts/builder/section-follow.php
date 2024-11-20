@@ -4,29 +4,29 @@ if($args['row']):
 
   <section class="follow"<?php if($id) echo ' id="' . $id . '"' ?>>
 
-    <?php if ($background): ?>
+    <?php if ($field = get_field('background_2', 'option')): ?>
       <div class="bg">
-        <?= wp_get_attachment_image($background['ID'], 'full') ?>
+        <?= wp_get_attachment_image($field['ID'], 'full') ?>
       </div>
     <?php endif ?>
 
     <div class="content-width">
       <div class="title">
 
-        <?php if ($label): ?>
-          <h6 class="label"><?= $label ?></h6>
+        <?php if ($field = get_field('label_2', 'option')): ?>
+          <h6 class="label"><?= $field ?></h6>
         <?php endif ?>
 
-        <?php if ($link_1): ?>
+        <?php if ($field = get_field('link_1_2', 'option')): ?>
           <h2>
-            <a href="<?= $link_1['url'] ?>"<?php if($link_1['target']) echo ' target="_blank"' ?>><?= $link_1['title'] ?></a>
+            <a href="<?= $field['url'] ?>"<?php if($field['target']) echo ' target="_blank"' ?>><?= html_entity_decode($field['title']) ?></a>
           </h2>
         <?php endif ?>
 
       </div>
       <div class="slider-wrap">
 
-        <?php if($gallery): ?>
+        <?php if($images = get_field('gallery_2', 'option')): ?>
           <div class="nav-wrap">
             <div class="swiper-button-next inst-next"><img src="<?= get_stylesheet_directory_uri() ?>/img/icon-6.svg" alt=""></div>
             <div class="swiper-button-prev inst-prev"><img src="<?= get_stylesheet_directory_uri() ?>/img/icon-6.svg" alt=""></div>
@@ -34,7 +34,7 @@ if($args['row']):
           <div class="swiper inst-slider">
             <div class="swiper-wrapper">
 
-              <?php foreach($gallery as $image): ?>
+              <?php foreach($images as $image): ?>
 
                 <div class="swiper-slide ">
                   <a href="<?= $image['url'] ?>" data-fancybox="1">
@@ -50,10 +50,10 @@ if($args['row']):
 
         <?php endif; ?>
 
-        <?php if ($link_2): ?>
+        <?php if ($field = get_field('link_2_2', 'option')): ?>
           <div class="btn-wrap">
-            <a href="<?= $link_2['url'] ?>" class="btn-default btn-trans"<?php if($link_2['target']) echo ' target="_blank"' ?>>
-              <span><?= $link_2_text ?: $link_2['title'] ?></span>
+            <a href="<?= $field['url'] ?>" class="btn-default btn-trans"<?php if($field['target']) echo ' target="_blank"' ?>>
+              <span><?= html_entity_decode($field['title']) ?></span>
               <span><img src="<?= get_stylesheet_directory_uri() ?>/img/icon-1.svg" alt=""></span>
             </a>
           </div>

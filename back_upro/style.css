@@ -5,3 +5,18 @@ Theme Name: Backpackboyz
 figure img{
 	height: auto;
 }
+
+.form-contact .input-wrap:nth-child(2) {
+    border-left-width: 2px;
+}
+
+.form-contact .input-wrap:nth-child(3) {
+    border-left-width: 0;
+}
+
+@media (max-width: 575px){
+	
+.form-contact .input-wrap:nth-child(3) {
+    border-left-width: 2px;
+}
+}

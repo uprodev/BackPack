@@ -58,7 +58,7 @@ jQuery(document).ready(function ($) {
         spaceBetween: 20,
       },
       992: {
-        spaceBetween: 95,
+        spaceBetween: 32,
       },
     },
   });
@@ -98,4 +98,14 @@ jQuery(document).ready(function ($) {
 
   //parallax
   var rellax = new Rellax('.rellax');
+
+
+  //accordion
+  $(function() {
+    $(".accordion > .accordion-item.is-active").children(".accordion-panel").slideDown();
+    $(document).on('click', '.accordion > .accordion-item .accordion-thumb', function (e){
+      $(this).parent('.accordion-item').siblings(".accordion-item").removeClass("is-active").children(".accordion-panel").slideUp();
+      $(this).parent('.accordion-item').toggleClass("is-active").children(".accordion-panel").slideToggle("ease-out");
+    })
+  });
 });

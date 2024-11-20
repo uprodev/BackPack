@@ -33,15 +33,19 @@ add_theme_support('html5');
 add_theme_support( 'post-thumbnails' ); 
 
 
-if( function_exists('acf_add_options_page') ) {
-	
-	acf_add_options_page(array(
-		'page_title' 	=> 'Main settings',
-		'menu_title'	=> 'Theme options',
-		'menu_slug' 	=> 'theme-general-settings',
-		'capability'	=> 'edit_posts',
-		'redirect'		=> false
-	));
+if(function_exists('acf_add_options_page') && function_exists('acf_add_options_sub_page')) {
+    
+    $parent = acf_add_options_page(array(
+        'page_title'    => 'Main settings',
+        'menu_title'    => 'Theme options',
+        'menu_slug'     => 'theme-general-settings',
+        'redirect'      => false
+    ));
+    $child = acf_add_options_sub_page(array(
+        'page_title'  => 'Sections',
+        'menu_title'  => 'Sections',
+        'parent_slug' => $parent['menu_slug'],
+    ));
 }
 
 

@@ -51,7 +51,7 @@ if($args['row']):
               $item_link_url = $item['link'] ? $item['link']['url'] : ($is_product ? get_permalink($item['product']->ID) : get_term_link($item['category']->term_id));
               $item_link_target = $item['link'] && $item['link']['target'] ? $item['link']['target'] : '';
               $item_image = $is_product ? get_the_post_thumbnail($item['product']->ID, 'full') : wp_get_attachment_image(get_field('image', 'term_' . $item['category']->term_id)['ID'], 'full');
-              $item_title = $is_product ? $item['product']->post_title : $item['category']->name;
+              $item_title = $is_product ? (get_field('title', $item['product']->ID) ?: $item['product']->post_title ) : (get_field('title', 'term_' . $item['category']->term_id) ?: $item['category']->name);
               ?>
               <?php if ($is_item): ?>
                 <div class="swiper-slide<?php if($item['is_white']) echo ' swiper-slide-white' ?>">
