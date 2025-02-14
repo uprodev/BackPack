@@ -24,7 +24,7 @@ if($args['row']):
 
           <?php if ($link): ?>
             <div class="btn-wrap">
-              <a href="<?= $link['url'] ?>" class="btn-default btn-red"<?php if($link['target']) echo ' target="_blank"' ?>>
+              <a href="<?= $is_modal ? '#popup' : $link['url'] ?>" class="btn-default btn-red<?php if($is_modal) echo ' fancybox' ?>"<?php if($link['target']) echo ' target="_blank"' ?>>
                 <span><?= $link['title'] ?></span>
                 <span><img src="<?= get_stylesheet_directory_uri() ?>/img/icon-3.svg" alt=""></span>
               </a>
@@ -48,8 +48,8 @@ if($args['row']):
               $is_category = $item['type'] == 'Category' && $item['category'];
               $is_item = $is_product || $is_category;
 
-              $item_link_url = $item['link'] ? $item['link']['url'] : ($is_product ? get_permalink($item['product']->ID) : get_term_link($item['category']->term_id));
-              $item_link_target = $item['link'] && $item['link']['target'] ? $item['link']['target'] : '';
+              $item_link_url = $item['is_modal'] ? '#popup' : ($item['link'] ? $item['link']['url'] : ($is_product ? get_permalink($item['product']->ID) : get_term_link($item['category']->term_id)));
+              $item_link_target = !$item['is_modal'] && $item['link'] && $item['link']['target'] ? $item['link']['target'] : '';
               $item_image = $is_product ? get_the_post_thumbnail($item['product']->ID, 'full') : wp_get_attachment_image(get_field('image', 'term_' . $item['category']->term_id)['ID'], 'full');
               $item_title = $is_product ? (get_field('title', $item['product']->ID) ?: $item['product']->post_title ) : (get_field('title', 'term_' . $item['category']->term_id) ?: $item['category']->name);
               ?>
@@ -66,7 +66,7 @@ if($args['row']):
                       <a href="<?= $item_link_url ?>"<?php if($item_link_target) echo ' target="_blank"' ?>><?= $item_title ?></a>
                     </h3>
                     <div class="btn-wrap">
-                      <a href="<?= $item_link_url ?>" class="btn-default btn-red"<?php if($item_link_target) echo ' target="_blank"' ?>>
+                      <a href="<?= $item_link_url ?>" class="btn-default btn-red<?php if($item['is_modal']) echo ' fancybox' ?>"<?php if($item_link_target) echo ' target="_blank"' ?>>
                         <span><?php _e('buy', 'BackPack') ?></span>
                         <span><img src="<?= get_stylesheet_directory_uri() ?>/img/icon-4.svg" alt=""></span>
                       </a>

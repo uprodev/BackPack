@@ -25,7 +25,7 @@
         
         <?php if ($logo = get_field('logo_2_h', 'option')): ?>
           <div class="info">
-            
+
             <?php if ($link = get_field('logo_2_link_h', 'option')): ?>
               <a href="<?= $link['url'] ?>"<?php if($link['target']) echo ' target="_blank"' ?>>
               <?php endif ?>
@@ -38,8 +38,24 @@
             
           </div>
         <?php endif ?>
+      
+      <?php $menu = wp_get_nav_menu_items(2) ?>
+
+      <?php if ($menu): ?>
+        <nav class="menu-wrap">
+          <ul class="menu">
+
+            <?php foreach ($menu as $item): ?>
+              <li>
+                <a href="<?= $item->url ?>"<?php if(get_field('is_popup', $item->ID)) echo ' class="fancybox"' ?><?php if($item->target) echo ' target="_blank"' ?>><?= $item->title ?></a>
+              </li>
+            <?php endforeach ?>
+
+          </ul>
+        </nav>
+      <?php endif ?>
         
-        <div class="right">
+        <div class="right<?php if(!is_front_page()) echo ' white' ?>">
 
           <?php if ($field = get_field('link_h', 'option')): ?>
             <div class="order">
@@ -48,7 +64,10 @@
           <?php endif ?>
 
           <div class="open-menu">
-            <a href="#"><img src="<?= get_stylesheet_directory_uri() ?>/img/menu.svg" alt=""></a>
+            <a href="#">
+              <!-- <img src="<?= get_stylesheet_directory_uri() ?>/img/menu.svg" alt=""> -->
+              MENU
+            </a>
           </div>
         </div>
         
@@ -65,7 +84,7 @@
         </a>
       </div>
     </div>
-    <div class="wrap">
+    <div class="wrap"<?php if($field = get_field('mobile_menu_background_image_h', 'option')) echo ' style="background-image: url(' . $field['url'] . ')"' ?>>
 
       <?php if ($field = get_field('logo_h', 'option')): ?>
         <div class="logo-wrap">
@@ -75,15 +94,22 @@
         </div>
       <?php endif ?>
       
-      <nav class="mob-menu-wrap">
+      <?php $menu = wp_get_nav_menu_items(2) ?>
 
-        <?php wp_nav_menu( array(
-          'theme_location'  => 'header',
-          'container'       => '',
-          'items_wrap'      => '<ul class="mob-menu">%3$s</ul>'
-        )); ?>
+      <?php if ($menu): ?>
+        <nav class="mob-menu-wrap">
+          <ul class="mob-menu">
 
-      </nav>
+            <?php foreach ($menu as $item): ?>
+              <li>
+                <a href="<?= $item->url ?>"<?php if(get_field('is_popup', $item->ID)) echo ' class="fancybox"' ?><?php if($item->target) echo ' target="_blank"' ?>><?= $item->title ?></a>
+              </li>
+            <?php endforeach ?>
+
+          </ul>
+        </nav>
+      <?php endif ?>
+
     </div>
   </div>
 

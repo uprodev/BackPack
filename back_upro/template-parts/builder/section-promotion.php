@@ -28,7 +28,7 @@ if($args['row']):
 
         <?php if ($link): ?>
           <div class="btn-wrap">
-            <a href="<?= $link['url'] ?>" class="btn-default"<?php if($link['target']) echo ' target="_blank"' ?>>
+            <a href="<?= $is_modal ? '#popup' : $link['url'] ?>" class="btn-default<?php if($is_modal) echo ' fancybox' ?>"<?php if($link['target']) echo ' target="_blank"' ?>>
               <span><?= $link['title'] ?></span>
               <span><img src="<?= get_stylesheet_directory_uri() ?>/img/icon-1.svg" alt=""></span>
             </a>

@@ -1,7 +1,15 @@
 /*   
 Theme Name: Backpackboyz
 */
-
+.menu-responsive .wrap{
+	background-size: cover!important;
+}
+.menu-responsive .mob-menu-wrap{
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	float: inherit!important;
+}
 figure img{
 	height: auto;
 }
@@ -12,6 +20,96 @@ figure img{
 
 .form-contact .input-wrap:nth-child(3) {
     border-left-width: 0;
+}
+.top-line .white .open-menu a img{
+	filter: invert(1);
+}
+.top-line .white .open-menu a{
+	height: 42px;
+	position: relative;
+	top: 10px;
+}
+.top-line .white .open-menu a:hover{
+	opacity: 0.7
+}
+.top-line .white .order a{
+	color:#fff;
+}
+.top-line .white .order a:hover{
+	color: #ed1d24;
+}
+
+
+/*12.2024*/
+/*.product .slider-wrap{
+	padding-left: 0!important;
+}
+.follow .slider-wrap{
+	padding-left: 0!important;
+}
+
+.follow .title{
+	padding: 0!important;
+}*/
+
+.accordion .accordion-thumb{
+	padding-right: 50px;
+	position: relative;
+}
+
+.accordion .accordion-thumb:after{
+	border-bottom: 2px solid #a71718;
+	border-right: 2px solid #a71718;
+	content: '';
+	display: block;
+	height: 20px;
+	margin-top: -15px;
+	pointer-events: none;
+	position: absolute;
+	right: 12px;
+	top: 50%;
+	-webkit-transform-origin: 66% 66%;
+	-ms-transform-origin: 66% 66%;
+	transform-origin: 66% 66%;
+	-webkit-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	transform: rotate(45deg);
+	-webkit-transition: all 0.15s ease-in-out;
+	transition: all 0.15s ease-in-out;
+	width: 20px;
+}
+
+.accordion .is-active .accordion-thumb:after {
+	border-bottom: 2px solid #fff;
+	border-right: 2px solid #fff;
+	-webkit-transform: rotate(-135deg);
+	-ms-transform: rotate(-135deg);
+	transform: rotate(-135deg);
+}
+
+section{
+	position: relative;
+	z-index: 10;
+}
+
+footer .bg{
+	position: fixed;
+}
+
+.text-img{
+	z-index: 11;
+}
+
+.img-text{
+	background: #ed1d24;
+	z-index: 9;
+}
+
+
+@media (max-width: 991px){
+	.top-line .white .open-menu a{
+	top: -2px
+}
 }
 
 @media (max-width: 575px){

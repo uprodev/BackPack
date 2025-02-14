@@ -164,9 +164,7 @@ header {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+            justify-content: flex-end;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
@@ -1032,14 +1030,13 @@ footer {
     color: #fff; }
 
 .top-line .open-menu a {
-  color: #ed1d24;
+  color: #fff;
   font-size: 68px;
   font-weight: 900;
   line-height: 1;
   letter-spacing: -2px;
   text-align: right; }
-  .top-line .open-menu a:hover {
-    color: #fff; }
+
 
 .text-img {
   padding: 248px 0 173px;
@@ -1379,6 +1376,222 @@ input[type=number] {
 .accordion .is-active h2 {
   color: #fff; }
 
-/*----------------------------END-LOCATIONS-PAGE---------------------------------*/
 
+/*----------------------------END-LOCATIONS-PAGE---------------------------------*/
+.popup-default {
+  width: 720px;
+  max-width: 100%;
+  padding: 20px;
+  overflow: visible;
+  background: transparent !important; }
+.popup-default .wrap-main {
+  padding: 30px 50px;
+  border-radius: 48px 8px 48px 8px;
+  /* product */
+  -webkit-box-shadow: 0px 20px 52px 0px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 20px 25px 0px rgba(0, 0, 0, 0.15);
+  /* Dark Red */
+  background: #a71718; }
+.popup-default h6 {
+  font-size: 24px;
+  font-weight: 900;
+  line-height: 32px;
+  letter-spacing: -1px;
+  text-align: left;
+  text-transform: uppercase;
+  color: #000;
+  margin-bottom: 20px; }
+.popup-default h2 {
+  font-size: 64px;
+  font-weight: 900;
+  line-height: 64px;
+  letter-spacing: -1px;
+  text-align: left;
+  text-transform: uppercase;
+  color: #fff;
+  padding-bottom: 30px;
+  margin-bottom: 30px;
+  border-bottom: 1px solid #fff; }
+.popup-default .popup-form .input-wrap {
+  margin-bottom: 15px;
+  position: relative; }
+.popup-default .popup-form .input-wrap input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  opacity: 0;
+  cursor: pointer; }
+.popup-default .popup-form .input-wrap label {
+  display: block;
+  font-size: 32px;
+  font-weight: 900;
+  line-height: 56px;
+  letter-spacing: -1px;
+  text-align: left;
+  color: #fff;
+  height: 56px;
+  padding: 0 16px;
+  -webkit-transition: all .4s ease;
+  transition: all .4s ease; }
+.popup-default .popup-form .input-wrap label img {
+  margin-right: 15px;
+  position: relative;
+  top: 1px; }
+.popup-default .popup-form .input-wrap input:hover + label {
+  background: #fff;
+  color: #ed1d24; }
+.popup-default .popup-form .input-wrap input:hover + label img {
+  -webkit-filter: brightness(0) saturate(100%) invert(16%) sepia(57%) saturate(6621%) hue-rotate(350deg) brightness(97%) contrast(92%);
+  filter: brightness(0) saturate(100%) invert(16%) sepia(57%) saturate(6621%) hue-rotate(350deg) brightness(97%) contrast(92%); }
+.popup-default .popup-form .input-wrap input:checked + label {
+  background: #fff;
+  color: #ed1d24; }
+.popup-default .popup-form .input-wrap input:checked + label img {
+  -webkit-filter: brightness(0) saturate(100%) invert(16%) sepia(57%) saturate(6621%) hue-rotate(350deg) brightness(97%) contrast(92%);
+  filter: brightness(0) saturate(100%) invert(16%) sepia(57%) saturate(6621%) hue-rotate(350deg) brightness(97%) contrast(92%); }
+.popup-default .btn-wrap {
+  margin-top: 30px;
+  padding-top: 30px;
+  border-top: 1px solid #fff; }
+.popup-default .btn-wrap button, .popup-default .btn-wrap a {
+  width: 100%;
+  cursor: pointer; }
+.popup-default .btn-wrap button span, .popup-default .btn-wrap a span {
+  height: 98px;
+  padding: 0 32px;
+  width: calc(100% - 112px);
+  text-align: left;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start; }
+.popup-default .btn-wrap button span:last-child, .popup-default .btn-wrap a span:last-child {
+  width: 112px; }
+.popup-default .fancybox-close-small {
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  border: 2px solid white;
+  background: #a71718 url("../img/bg-5.png");
+  color: #000;
+  padding: 0; }
+.popup-default .fancybox-close-small svg {
+  display: none; }
+.popup-default .fancybox-close-small:after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 100%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  content: '';
+  width: 24px;
+  height: 24px;
+  background: url("../img/icon-11.svg") no-repeat center; }
+.popup-default .fancybox-close-small:hover {
+  background: #fff; }
+
+.is-dark .fancybox-bg {
+    background: rgb(30, 30, 30)!important;
+}
+
+.iframe{
+	background: #000;
+	padding: 220px 0 100px;
+	background-size: cover!important;
+}
+.iframe .content-width{
+	max-width: 100%;
+	width: 100%;
+	padding: 0!important;
+}
+.iframe h1{
+	text-align: center;
+	font-size: 60px;
+    font-weight: 900;
+    line-height: 1;
+    text-transform: uppercase;
+    margin-bottom: 35px;
+	position: relative;
+	z-index: 9;
+	color: #ed1d24;
+}
+
+.iframe h2{
+	text-align: center;
+	font-size: 70px;
+    font-weight: 900;
+    line-height: 1;
+    text-transform: uppercase;
+    margin-bottom: 35px;
+	position: relative;
+	z-index: 9;
+	display: none;
+}
+.iframe .content>div{
+	position: relative;
+}
+.iframe .content>div:before{
+
+      position: absolute;
+     bottom: 100%;
+	height: 200px;
+      left: 0;
+      content: '';
+      width: 100%;
+  
+     background: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(0,0,0,1) 50%, rgba(0,0,0,1) 100%);
+
+}
+.top-line .content-width .menu-wrap{
+
+  width: 700px;
+
+}
+.top-line .content-width .menu-wrap .menu{
+  justify-content: flex-end;
+  display: flex;
+  grid-gap: 20px;
+}
+.top-line .right{
+  display: none;
+}
+.home-banner .bg video{
+  position: absolute;
+  top: 130px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.top-line .content-width .menu-wrap a{
+  font-size: 22px;
+  font-weight: 900;
+  line-height: 1;
+  text-align: left;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.top-line .info {
+  width: calc(100% - 800px);
+  padding: 0;
+}
+
+.home-banner .content{
+  transform: none;
+  padding: 150px 0 150px;
+}
+
+.top-line {
+  padding-top: 20px;
+}
+
+.home-banner .content h1 a:hover{
+  opacity: 0.7;
+}
+.home-banner h1{
+  padding: 0;
+}
 /*# sourceMappingURL=styles.css.map */

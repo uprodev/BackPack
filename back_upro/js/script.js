@@ -108,4 +108,30 @@ jQuery(document).ready(function ($) {
       $(this).parent('.accordion-item').toggleClass("is-active").children(".accordion-panel").slideToggle("ease-out");
     })
   });
+
+  $(".fancybox").fancybox({
+    touch:false,
+    autoFocus:false,
+	     beforeShow: function () {
+      $('html').addClass("is-dark")
+    },
+	  afterClose: function () {
+      $('html').removeClass("is-dark")
+    }
+  });
+
+  $('.popup-default .btn-wrap a').on('click', function (e) {
+    e.preventDefault(); // Предотвращаем переход по ссылке
+
+
+    const selectedRadio = $('input[name="radio1"]:checked');
+
+    if (selectedRadio.length) {
+      const selectedValue = selectedRadio.val();
+
+      $(this).attr('href', `${selectedValue}`);
+      window.location.href = $(this).attr('href');
+    }
+
+  });
 });
